@@ -1,0 +1,162 @@
+\documentclass[%singlesided,
+               doublesided,
+               paper=a4,
+               fontsize=10pt
+              ]{my-resume}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% set geometry
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength\highlightwidth{8cm}
+\setlength\headerheight{1cm}            % note that margintop gets added to this value, i.e. the header bar is 5cm
+\setlength\marginleft{1cm}
+\setlength\marginright{\marginleft}      % needs to be 1.5 times to be actually equal. why?
+\setlength\margintop{1cm}
+\setlength\marginbottom{1cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FONTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{fontspec}
+\setmainfont{Carlito}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COLORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\colorlet{highlightbarcolor}{lightgray}
+\colorlet{headerbarcolor}{darkgray}
+
+\colorlet{headerfontcolor}{white}
+\colorlet{accent}{black}
+\colorlet{heading}{black}
+\colorlet{emphasis}{black}
+\colorlet{body}{black}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% set document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\name{Ansh Sikka}
+\makeheader
+
+\highlightbar{
+
+    \section{Contact}
+    
+    \email{anshsikka.work@gmail.com}
+    \phone{630-765-2192}
+    \location{Greater Chicago Area}
+    \homepage{anshsikka.com}{}
+    \github{@anshikka}{}
+    \linkedin{Ansh Sikka}{}
+    
+    \section{Skills}
+    
+    \skillsection{Programming}
+    \skill{Python}
+    \skill{SQL}
+    \skill{JAVA}
+    \skill{HTML/CSS/JS}
+    \skill{C++/C\#/C}
+    
+    \vspace{0.5em}
+    \skillsection{Technologies}
+    \skill{SSIS/Azure Data Factory}
+    \skill{Azure Cloud}
+    \skill{Snowflake}
+    \skill{Apache NiFi}
+    \skill{PowerApps}
+    \skill{AWS}
+    
+    \section{Certificates}
+    \simpleskill{Microsoft}{AZ-900: Azure Fundamentals}
+
+    
+    
+    \section{Achievements}
+    \achievement{(Deloitte) Achieved 4 Applause Awards (2022-2024)}
+    \achievement{(ExxonMobil) Promoted to Design Lead on Data Solutions Team (2021)}
+    
+    
+
+}
+\mainbar{
+
+    \section[\faMortarBoard]{Education}
+    \job{Jan 2022-Dec 2023)}
+        {Georgia Institute of Technology}
+        {M.Sc. Computer Science}
+        {-Relevant Coursework: Data \& Visual Analytics, AI, Machine Learning for Trading, Graduate Intro to Operating Systems, Knowledge-Based AI, Database Fundamentals, Computer Networks, Software Development Processes, Human Computer Interaction, EdTech}
+    \job{Aug 2017-May 2020}
+        {University of Minnesota-Twin Cities\\Minneapolis, USA}
+        {B.Sc. Computer Science}
+        { -Relevant Coursework: Graduate-Level Software Engineering Course, Big Data Architecture, Artificial Intelligence, Database Fundamentals, Data Science/Machine Learning, Data Structures and Algorithms,  Functional Programming, Databases\\
+        -Undergraduate CS TA
+        }
+    
+    \section[\faGears]{Work history}
+    \job{Nov 2021 - Present}
+        {Deloitte | Chicago, USA}
+        {Strategy \& Analytics Solution Specialist}
+        {\textbf{Technologies}: SSIS, Azure + Data Factory, SQL, Python, Azure DevOps, AWS, Snowflake\\
+        \textbf{Responsibilities}: Data Engineer and Solutions Architect for a Federal Health Client
+        -Developed 9-10 new ETL pipelines and enhanced 7-8 others in SSIS for a federal health client\\
+         -Part of a 'Tiger Team' to quickly build out a data warehousing solution
+         -Optimized 2-3 ETL pipelines cutting their time by an average of 60\% using SQL best practices and optimization\\
+         -Automated an asset management system to pull new tablet models using Python web scraping (BeautifulSoup)\\
+         -Lead a ETL migration for over 20 pipelines cross-server\\
+         -Established a Tableau Usage Dashboard that gives insights on dashboard metadata \\
+         -Automated an enterprise data storage analysis that would've taken 3 weeks by developing a Python and SQL script that took just 3 hours\\
+         - Lead initiatives for best practices including code review, DevOps Management, Code Documentation, and Deployment Checklists\\
+         - On-boarded 4 backend developers weeks and acquainted them with new best practices
+         }
+    \job{Sep 2020 - Oct 2021}
+        {ExxonMobil | Houston, USA}
+        {Software Engineer and Design Lead}
+        {-Streamlined company-wide cybersecurity machine monitoring using flow-based programming via Apache NiFi for ETL and reduced time to find cybersecurity holes from months to minutes\\
+        - Working with Azure Functions, APIM, and KeyVault to develop an API to provide access to a central company data repository on Snowflake, helping reduce cost in data subscriptions (~\$75m in data subscription costs saved)\\
+        - Worked on a Zoom Analytics big data project, taking 500+ zoom events/sec as streaming data and processing it on Azure Functions and Azure Event Hub, warehousing it on Snowflake}
+    \job{May 2019-Aug 2019}
+        {ExxonMobil | Houston, USA}
+        {Software Engineering Intern}
+        {-Replatformed internal cloud adoption platform in an agile work environment to Microsoft Azure: Utilized blob storage, SQL, KeyVault, SendGrid, and search service.\\-Full Stack Web Development: Handlebars.js for frontend and Node.js for the backend.\\
+        -Customized open source CMS (Content Management System) to adapt to new website format and UX.\\
+        -Teaching assistant to over 100 other interns and employees helping them get started with Azure. }
+    
+    
+    \section{Personal Projects}
+    \project{Canvas Pre-Submission Preview Chrome Extension}{}
+    {-Developed a Chrome Extension that previews assignments \textit{before} turning them in on Canvas LMS, reducing the chance of submitting the wrong assignment\\
+    -Built using JavaScript and Chrome Developer Tools\\
+    -50+ users, wide pool from Georgia Tech students}
+    \project{SkillFlyer: A Crowd-Sourced Learning Platform}{}{
+    -Takes YouTube videos and ranks them through crowd sourcing by a variety of educational topics and subtopics\\
+    -Uses MongoDB as the data backend, NodeJS as the serving backend, and ReactJS as the frontend}
+    \project{Portfolio Website}{}{-Utilized Node.js and React.js to build an interactive web app portfolio website\\
+    -Deployed on cloud using GitHub pages}
+}
+\makebody
+\clearpage
+
+
+\pagestyle{highlightmain}
+\highlightbar{}
+
+
+\clearpage
+\pagestyle{empty}
+
+
+
+
+
+\end{document}
